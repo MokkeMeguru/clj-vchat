@@ -19,3 +19,15 @@ WHERE id = :id
 -- :doc deletes a user record given the id
 DELETE FROM users
 WHERE id = :id
+
+-- :name save-message! :! :n
+-- :doc save message
+INSERT INTO messages
+(chan, name, message, timestamp)
+VALUES (:chan, :name, :message, :timestamp)
+
+-- :name get-messages :! :n
+-- :doc select message by chan
+SELECT *
+FROM messages
+WHERE chan = :chan

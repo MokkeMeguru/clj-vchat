@@ -7,3 +7,12 @@ CREATE TABLE users
  last_login TIMESTAMP,
  is_active BOOLEAN,
  pass VARCHAR(300));
+
+
+CREATE TABLE messages
+(id INTEGER PRIMARY KEY AUTO_INCREMENT,
+ chan VARCHAR(30),
+ name VARCHAR(30),
+ message VARCHAR(200),
+ timestamp TIMESTAMP);
+ 

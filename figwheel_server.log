@@ -2368,3 +2368,304 @@ notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/
 Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
 [32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.833 seconds.[0m
 notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/pixi_art.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[31mFailed to compile build :app from ["src/cljs" "src/cljc" "env/dev/cljs"] in 0.183 seconds.[0m
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.417 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.202 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.041 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.955 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.807 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.732 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.088 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.303 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.858 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.654 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.391 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.088 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.127 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.927 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.906 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.416 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.137 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.047 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:12  column:50  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.components.ws/ws-chan[0m
+
+  [36m 8[0m  [36m(defn receive-message![0m
+  [36m 9[0m  [36m  ""[0m
+  [36m10[0m  [36m  [handler][0m
+  [36m11[0m  [36m  (fn [msg][0m
+  [33m12[0m  [1m    (->> msg .-data (t/read json-reader) (.send @ws-chan))))[0m
+  [0m  [0m  [33m                                                 ^--- Use of undeclared Var clj-vchats.components.ws/ws-chan[0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.93 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:12  column:50  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.components.ws/ws-chan[0m
+
+  [36m 8[0m  [36m(defn receive-message![0m
+  [36m 9[0m  [36m  ""[0m
+  [36m10[0m  [36m  [handler][0m
+  [36m11[0m  [36m  (fn [msg][0m
+  [33m12[0m  [1m    (->> msg .-data (t/read json-reader) (.send @ws-chan))[0m
+  [0m  [0m  [33m                                                 ^--- Use of undeclared Var clj-vchats.components.ws/ws-chan[0m
+  [36m13[0m  [36m    (throw (js/Error. "Websocket is not available"))))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.809 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:12  column:50  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.components.ws/ws-chan[0m
+
+  [36m 8[0m  [36m(defn receive-message![0m
+  [36m 9[0m  [36m  ""[0m
+  [36m10[0m  [36m  [handler][0m
+  [36m11[0m  [36m  (fn [msg][0m
+  [33m12[0m  [1m    (->> msg .-data (t/read json-reader) (.send @ws-chan))))[0m
+  [0m  [0m  [33m                                                 ^--- Use of undeclared Var clj-vchats.components.ws/ws-chan[0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.871 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:12  column:50  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.components.ws/ws-chan[0m
+
+  [36m 8[0m  [36m(defn receive-message![0m
+  [36m 9[0m  [36m  ""[0m
+  [36m10[0m  [36m  [handler][0m
+  [36m11[0m  [36m  (fn [msg][0m
+  [33m12[0m  [1m    (->> msg .-data (t/read json-reader) (.send @ws-chan))))[0m
+  [0m  [0m  [33m                                                 ^--- Use of undeclared Var clj-vchats.components.ws/ws-chan[0m
+  [36m13[0m  [36m[0m
+  [36m14[0m  [36m(defn send-message! [msg][0m
+  [36m15[0m  [36m  (if @ws-chan[0m
+  [36m16[0m  [36m    (->> msg (t/write json-writer) (.send @ws-chan))[0m
+  [36m17[0m  [36m    (throw (js/Error. "Websocket is not available"))))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:15  column:8  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.components.ws/ws-chan[0m
+
+  [36m11[0m  [36m  (fn [msg][0m
+  [36m12[0m  [36m    (->> msg .-data (t/read json-reader) (.send @ws-chan))))[0m
+  [36m13[0m  [36m[0m
+  [36m14[0m  [36m(defn send-message! [msg][0m
+  [33m15[0m  [1m  (if @ws-chan[0m
+  [0m  [0m  [33m       ^--- Use of undeclared Var clj-vchats.components.ws/ws-chan[0m
+  [36m16[0m  [36m    (->> msg (t/write json-writer) (.send @ws-chan))[0m
+  [36m17[0m  [36m    (throw (js/Error. "Websocket is not available"))))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:16  column:44  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.components.ws/ws-chan[0m
+
+  [36m12[0m  [36m    (->> msg .-data (t/read json-reader) (.send @ws-chan))))[0m
+  [36m13[0m  [36m[0m
+  [36m14[0m  [36m(defn send-message! [msg][0m
+  [36m15[0m  [36m  (if @ws-chan[0m
+  [33m16[0m  [1m    (->> msg (t/write json-writer) (.send @ws-chan))[0m
+  [0m  [0m  [33m                                           ^--- Use of undeclared Var clj-vchats.components.ws/ws-chan[0m
+  [36m17[0m  [36m    (throw (js/Error. "Websocket is not available"))))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.952 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:12  column:50  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.components.ws/ws-chan[0m
+
+  [36m 8[0m  [36m(defn receive-message![0m
+  [36m 9[0m  [36m  ""[0m
+  [36m10[0m  [36m  [handler][0m
+  [36m11[0m  [36m  (fn [msg][0m
+  [33m12[0m  [1m    (->> msg .-data (t/read json-reader) (.send @ws-chan))))[0m
+  [0m  [0m  [33m                                                 ^--- Use of undeclared Var clj-vchats.components.ws/ws-chan[0m
+  [36m13[0m  [36m[0m
+  [36m14[0m  [36m(defn send-message! [msg][0m
+  [36m15[0m  [36m  (if @ws-chan[0m
+  [36m16[0m  [36m    (->> msg (t/write json-writer) (.send @ws-chan))[0m
+  [36m17[0m  [36m    (throw (js/Error. "Websocket is not available"))))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:15  column:8  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.components.ws/ws-chan[0m
+
+  [36m11[0m  [36m  (fn [msg][0m
+  [36m12[0m  [36m    (->> msg .-data (t/read json-reader) (.send @ws-chan))))[0m
+  [36m13[0m  [36m[0m
+  [36m14[0m  [36m(defn send-message! [msg][0m
+  [33m15[0m  [1m  (if @ws-chan[0m
+  [0m  [0m  [33m       ^--- Use of undeclared Var clj-vchats.components.ws/ws-chan[0m
+  [36m16[0m  [36m    (->> msg (t/write json-writer) (.send @ws-chan))[0m
+  [36m17[0m  [36m    (throw (js/Error. "Websocket is not available"))))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:16  column:44  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.components.ws/ws-chan[0m
+
+  [36m12[0m  [36m    (->> msg .-data (t/read json-reader) (.send @ws-chan))))[0m
+  [36m13[0m  [36m[0m
+  [36m14[0m  [36m(defn send-message! [msg][0m
+  [36m15[0m  [36m  (if @ws-chan[0m
+  [33m16[0m  [1m    (->> msg (t/write json-writer) (.send @ws-chan))[0m
+  [0m  [0m  [33m                                           ^--- Use of undeclared Var clj-vchats.components.ws/ws-chan[0m
+  [36m17[0m  [36m    (throw (js/Error. "Websocket is not available"))))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.013 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:13  column:50  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.components.ws/ws-chan[0m
+
+  [36m 9[0m  [36m(defn receive-message![0m
+  [36m10[0m  [36m  ""[0m
+  [36m11[0m  [36m  [handler][0m
+  [36m12[0m  [36m  (fn [msg][0m
+  [33m13[0m  [1m    (->> msg .-data (t/read json-reader) (.send @ws-chan))))[0m
+  [0m  [0m  [33m                                                 ^--- Use of undeclared Var clj-vchats.components.ws/ws-chan[0m
+  [36m14[0m  [36m[0m
+  [36m15[0m  [36m(defn send-message! [msg][0m
+  [36m16[0m  [36m  (if @ws-chan[0m
+  [36m17[0m  [36m    (->> msg (t/write json-writer) (.send @ws-chan))[0m
+  [36m18[0m  [36m    (throw (js/Error. "Websocket is not available"))))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:16  column:8  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.components.ws/ws-chan[0m
+
+  [36m12[0m  [36m  (fn [msg][0m
+  [36m13[0m  [36m    (->> msg .-data (t/read json-reader) (.send @ws-chan))))[0m
+  [36m14[0m  [36m[0m
+  [36m15[0m  [36m(defn send-message! [msg][0m
+  [33m16[0m  [1m  (if @ws-chan[0m
+  [0m  [0m  [33m       ^--- Use of undeclared Var clj-vchats.components.ws/ws-chan[0m
+  [36m17[0m  [36m    (->> msg (t/write json-writer) (.send @ws-chan))[0m
+  [36m18[0m  [36m    (throw (js/Error. "Websocket is not available"))))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:17  column:44  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.components.ws/ws-chan[0m
+
+  [36m13[0m  [36m    (->> msg .-data (t/read json-reader) (.send @ws-chan))))[0m
+  [36m14[0m  [36m[0m
+  [36m15[0m  [36m(defn send-message! [msg][0m
+  [36m16[0m  [36m  (if @ws-chan[0m
+  [33m17[0m  [1m    (->> msg (t/write json-writer) (.send @ws-chan))[0m
+  [0m  [0m  [33m                                           ^--- Use of undeclared Var clj-vchats.components.ws/ws-chan[0m
+  [36m18[0m  [36m    (throw (js/Error. "Websocket is not available"))))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.127 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:14  column:50  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.components.ws/ws-chan[0m
+
+  [36m10[0m  [36m(defn receive-message![0m
+  [36m11[0m  [36m  ""[0m
+  [36m12[0m  [36m  [handler][0m
+  [36m13[0m  [36m  (fn [msg][0m
+  [33m14[0m  [1m    (->> msg .-data (t/read json-reader) (.send @ws-chan))))[0m
+  [0m  [0m  [33m                                                 ^--- Use of undeclared Var clj-vchats.components.ws/ws-chan[0m
+  [36m15[0m  [36m[0m
+  [36m16[0m  [36m(defn send-message! [msg][0m
+  [36m17[0m  [36m  (if @ws-chan[0m
+  [36m18[0m  [36m    (->> msg (t/write json-writer) (.send @ws-chan))[0m
+  [36m19[0m  [36m    (throw (js/Error. "Websocket is not available"))))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:17  column:8  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.components.ws/ws-chan[0m
+
+  [36m13[0m  [36m  (fn [msg][0m
+  [36m14[0m  [36m    (->> msg .-data (t/read json-reader) (.send @ws-chan))))[0m
+  [36m15[0m  [36m[0m
+  [36m16[0m  [36m(defn send-message! [msg][0m
+  [33m17[0m  [1m  (if @ws-chan[0m
+  [0m  [0m  [33m       ^--- Use of undeclared Var clj-vchats.components.ws/ws-chan[0m
+  [36m18[0m  [36m    (->> msg (t/write json-writer) (.send @ws-chan))[0m
+  [36m19[0m  [36m    (throw (js/Error. "Websocket is not available"))))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:18  column:44  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.components.ws/ws-chan[0m
+
+  [36m14[0m  [36m    (->> msg .-data (t/read json-reader) (.send @ws-chan))))[0m
+  [36m15[0m  [36m[0m
+  [36m16[0m  [36m(defn send-message! [msg][0m
+  [36m17[0m  [36m  (if @ws-chan[0m
+  [33m18[0m  [1m    (->> msg (t/write json-writer) (.send @ws-chan))[0m
+  [0m  [0m  [33m                                           ^--- Use of undeclared Var clj-vchats.components.ws/ws-chan[0m
+  [36m19[0m  [36m    (throw (js/Error. "Websocket is not available"))))[0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.989 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.869 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
