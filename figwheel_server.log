@@ -2669,3 +2669,880 @@ notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/
 Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
 [32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.869 seconds.[0m
 notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.668 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.464 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[36m----  Compiler Warning on   src/cljs/clj_vchats/core.cljs   line:74  column:15  ----[0m
+
+  [1mWrong number of args (0) passed to clj-vchats.components.ws/start-router![0m
+
+  [36m70[0m  [36m(do[0m
+  [36m71[0m  [36m  (set! (.-display (.-style (.getElementById js/document "viewing")))[0m
+  [36m72[0m  [36m        "block")[0m
+  [36m73[0m  [36m  (println "connect!")[0m
+  [33m74[0m  [1m  (ws/start-router!)[0m
+  [0m  [0m  [33m  ^--- Wrong number of args (0) passed to clj-vchats.components.ws/start-router![0m
+  [36m75[0m  [36m  )[0m
+  [36m76[0m  [36m(do[0m
+  [36m77[0m  [36m  (set! (.-display (.-style (.getElementById js/document "viewing")))[0m
+  [36m78[0m  [36m        "none")[0m
+  [36m79[0m  [36m  (println "disconnect!")[0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/core.cljs  ----[0m
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.411 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.28 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:59  column:30  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.components.ws/messaage-handler[0m
+
+  [36m55[0m  [36m  (stop-router!)[0m
+  [36m56[0m  [36m  (reset! router (sente/start-chsk-router![0m
+  [36m57[0m  [36m                  ch-chsk[0m
+  [36m58[0m  [36m                  (event-msg-handler[0m
+  [33m59[0m  [1m                   {:message messaage-handler[0m
+  [0m  [0m  [33m                             ^--- Use of undeclared Var clj-vchats.components.ws/messaage-handler[0m
+  [36m60[0m  [36m                    :state handshake-handler[0m
+  [36m61[0m  [36m                    :handshake state-handler}))))[0m
+  [36m62[0m  [36m[0m
+  [36m63[0m  [36m;; ---------------------------------------------[0m
+  [36m64[0m  [36m;; view[0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:87  column:53  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.components.ws/%[0m
+
+  [36m83[0m  [36m [:textarea.form-control[0m
+  [36m84[0m  [36m  {:rows 4[0m
+  [36m85[0m  [36m   :cols 50[0m
+  [36m86[0m  [36m   :value (:message @fields)[0m
+  [33m87[0m  [1m   :on-change @(swap! fields assoc :message (.. % -target -value))}]][0m
+  [0m  [0m  [33m                                                ^--- Use of undeclared Var clj-vchats.components.ws/%[0m
+  [36m88[0m  [36m[:input.btn.btn-primary[0m
+  [36m89[0m  [36m {:type :submit[0m
+  [36m90[0m  [36m  :on-click #(send-message!! [:clj-vchat/add-message @fields] 8000)[0m
+  [36m91[0m  [36m  :value "comment"}]]])[0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:90  column:19  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.components.ws/send-message!![0m
+
+  [36m86[0m  [36m       :value (:message @fields)[0m
+  [36m87[0m  [36m       :on-change @(swap! fields assoc :message (.. % -target -value))}]][0m
+  [36m88[0m  [36m    [:input.btn.btn-primary[0m
+  [36m89[0m  [36m     {:type :submit[0m
+  [33m90[0m  [1m      :on-click #(send-message!! [:clj-vchat/add-message @fields] 8000)[0m
+  [0m  [0m  [33m                  ^--- Use of undeclared Var clj-vchats.components.ws/send-message!![0m
+  [36m91[0m  [36m      :value "comment"}]]])[0m
+  [36m92[0m  [36m[0m
+  [36m93[0m  [36m(defn respons-handler [messages fields errors][0m
+  [36m94[0m  [36m  (fn [{[_ message] :?data}][0m
+  [36m95[0m  [36m    (if-let [response-errors (:errors message)][0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:106  column:6  ----[0m
+
+  [1mNo such namespace: ws, could not locate ws.cljs, ws.cljc, or JavaScript source providing "ws"[0m
+
+  [36m102[0m  [36m(defn home [][0m
+  [36m103[0m  [36m  (let [messages (atom nil)[0m
+  [36m104[0m  [36m        errors (atom nil)[0m
+  [36m105[0m  [36m        fields (atom nil)][0m
+  [33m106[0m  [1m    (ws/start-router! (response-handler messages fields errors))[0m
+  [0m   [0m  [33m     ^--- No such namespace: ws, could not locate ws.cljs, ws.cljc, or JavaScript source providing "ws"[0m
+  [36m107[0m  [36m    [:div[0m
+  [36m108[0m  [36m     [:div.row[0m
+  [36m109[0m  [36m      [:div.span12[0m
+  [36m110[0m  [36m       [message-list messages]]][0m
+  [36m111[0m  [36m     [:div.row[0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:106  column:6  ----[0m
+
+  [1mUse of undeclared Var ws/start-router![0m
+
+  [36m102[0m  [36m(defn home [][0m
+  [36m103[0m  [36m  (let [messages (atom nil)[0m
+  [36m104[0m  [36m        errors (atom nil)[0m
+  [36m105[0m  [36m        fields (atom nil)][0m
+  [33m106[0m  [1m    (ws/start-router! (response-handler messages fields errors))[0m
+  [0m   [0m  [33m     ^--- Use of undeclared Var ws/start-router![0m
+  [36m107[0m  [36m    [:div[0m
+  [36m108[0m  [36m     [:div.row[0m
+  [36m109[0m  [36m      [:div.span12[0m
+  [36m110[0m  [36m       [message-list messages]]][0m
+  [36m111[0m  [36m     [:div.row[0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:106  column:24  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.components.ws/response-handler[0m
+
+  [36m102[0m  [36m(defn home [][0m
+  [36m103[0m  [36m  (let [messages (atom nil)[0m
+  [36m104[0m  [36m        errors (atom nil)[0m
+  [36m105[0m  [36m        fields (atom nil)][0m
+  [33m106[0m  [1m    (ws/start-router! (response-handler messages fields errors))[0m
+  [0m   [0m  [33m                       ^--- Use of undeclared Var clj-vchats.components.ws/response-handler[0m
+  [36m107[0m  [36m    [:div[0m
+  [36m108[0m  [36m     [:div.row[0m
+  [36m109[0m  [36m      [:div.span12[0m
+  [36m110[0m  [36m       [message-list messages]]][0m
+  [36m111[0m  [36m     [:div.row[0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.302 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:59  column:30  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.components.ws/messaage-handler[0m
+
+  [36m55[0m  [36m  (stop-router!)[0m
+  [36m56[0m  [36m  (reset! router (sente/start-chsk-router![0m
+  [36m57[0m  [36m                  ch-chsk[0m
+  [36m58[0m  [36m                  (event-msg-handler[0m
+  [33m59[0m  [1m                   {:message messaage-handler[0m
+  [0m  [0m  [33m                             ^--- Use of undeclared Var clj-vchats.components.ws/messaage-handler[0m
+  [36m60[0m  [36m                    :state handshake-handler[0m
+  [36m61[0m  [36m                    :handshake state-handler}))))[0m
+  [36m62[0m  [36m[0m
+  [36m63[0m  [36m;; ---------------------------------------------[0m
+  [36m64[0m  [36m;; view[0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:87  column:53  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.components.ws/%[0m
+
+  [36m83[0m  [36m [:textarea.form-control[0m
+  [36m84[0m  [36m  {:rows 4[0m
+  [36m85[0m  [36m   :cols 50[0m
+  [36m86[0m  [36m   :value (:message @fields)[0m
+  [33m87[0m  [1m   :on-change @(swap! fields assoc :message (.. % -target -value))}]][0m
+  [0m  [0m  [33m                                                ^--- Use of undeclared Var clj-vchats.components.ws/%[0m
+  [36m88[0m  [36m[:input.btn.btn-primary[0m
+  [36m89[0m  [36m {:type :submit[0m
+  [36m90[0m  [36m  :on-click #(send-message!! [:clj-vchat/add-message @fields] 8000)[0m
+  [36m91[0m  [36m  :value "comment"}]]])[0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:90  column:19  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.components.ws/send-message!![0m
+
+  [36m86[0m  [36m       :value (:message @fields)[0m
+  [36m87[0m  [36m       :on-change @(swap! fields assoc :message (.. % -target -value))}]][0m
+  [36m88[0m  [36m    [:input.btn.btn-primary[0m
+  [36m89[0m  [36m     {:type :submit[0m
+  [33m90[0m  [1m      :on-click #(send-message!! [:clj-vchat/add-message @fields] 8000)[0m
+  [0m  [0m  [33m                  ^--- Use of undeclared Var clj-vchats.components.ws/send-message!![0m
+  [36m91[0m  [36m      :value "comment"}]]])[0m
+  [36m92[0m  [36m[0m
+  [36m93[0m  [36m(defn respons-handler [messages fields errors][0m
+  [36m94[0m  [36m  (fn [{[_ message] :?data}][0m
+  [36m95[0m  [36m    (if-let [response-errors (:errors message)][0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:106  column:21  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.components.ws/response-handler[0m
+
+  [36m102[0m  [36m(defn home [][0m
+  [36m103[0m  [36m  (let [messages (atom nil)[0m
+  [36m104[0m  [36m        errors (atom nil)[0m
+  [36m105[0m  [36m        fields (atom nil)][0m
+  [33m106[0m  [1m    (start-router! (response-handler messages fields errors))[0m
+  [0m   [0m  [33m                    ^--- Use of undeclared Var clj-vchats.components.ws/response-handler[0m
+  [36m107[0m  [36m    [:div[0m
+  [36m108[0m  [36m     [:div.row[0m
+  [36m109[0m  [36m      [:div.span12[0m
+  [36m110[0m  [36m       [message-list messages]]][0m
+  [36m111[0m  [36m     [:div.row[0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.219 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.2 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.06 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 3.335 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:59  column:30  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.components.ws/messaage-handler[0m
+
+  [36m55[0m  [36m  (stop-router!)[0m
+  [36m56[0m  [36m  (reset! router (sente/start-chsk-router![0m
+  [36m57[0m  [36m                  ch-chsk[0m
+  [36m58[0m  [36m                  (event-msg-handler[0m
+  [33m59[0m  [1m                   {:message messaage-handler[0m
+  [0m  [0m  [33m                             ^--- Use of undeclared Var clj-vchats.components.ws/messaage-handler[0m
+  [36m60[0m  [36m                    :state handshake-handler[0m
+  [36m61[0m  [36m                    :handshake state-handler}))))[0m
+  [36m62[0m  [36m[0m
+  [36m63[0m  [36m;; ---------------------------------------------[0m
+  [36m64[0m  [36m;; view[0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:87  column:53  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.components.ws/%[0m
+
+  [36m83[0m  [36m [:textarea.form-control[0m
+  [36m84[0m  [36m  {:rows 4[0m
+  [36m85[0m  [36m   :cols 50[0m
+  [36m86[0m  [36m   :value (:message @fields)[0m
+  [33m87[0m  [1m   :on-change @(swap! fields assoc :message (.. % -target -value))}]][0m
+  [0m  [0m  [33m                                                ^--- Use of undeclared Var clj-vchats.components.ws/%[0m
+  [36m88[0m  [36m[:input.btn.btn-primary[0m
+  [36m89[0m  [36m {:type :submit[0m
+  [36m90[0m  [36m  :on-click #(send-message!! [:clj-vchat/add-message @fields] 8000)[0m
+  [36m91[0m  [36m  :value "comment"}]]])[0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:90  column:19  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.components.ws/send-message!![0m
+
+  [36m86[0m  [36m       :value (:message @fields)[0m
+  [36m87[0m  [36m       :on-change @(swap! fields assoc :message (.. % -target -value))}]][0m
+  [36m88[0m  [36m    [:input.btn.btn-primary[0m
+  [36m89[0m  [36m     {:type :submit[0m
+  [33m90[0m  [1m      :on-click #(send-message!! [:clj-vchat/add-message @fields] 8000)[0m
+  [0m  [0m  [33m                  ^--- Use of undeclared Var clj-vchats.components.ws/send-message!![0m
+  [36m91[0m  [36m      :value "comment"}]]])[0m
+  [36m92[0m  [36m[0m
+  [36m93[0m  [36m(defn response-handler [messages fields errors][0m
+  [36m94[0m  [36m  (fn [{[_ message] :?data}][0m
+  [36m95[0m  [36m    (if-let [response-errors (:errors message)][0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.321 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:87  column:53  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.components.ws/%[0m
+
+  [36m83[0m  [36m [:textarea.form-control[0m
+  [36m84[0m  [36m  {:rows 4[0m
+  [36m85[0m  [36m   :cols 50[0m
+  [36m86[0m  [36m   :value (:message @fields)[0m
+  [33m87[0m  [1m   :on-change @(swap! fields assoc :message (.. % -target -value))}]][0m
+  [0m  [0m  [33m                                                ^--- Use of undeclared Var clj-vchats.components.ws/%[0m
+  [36m88[0m  [36m[:input.btn.btn-primary[0m
+  [36m89[0m  [36m {:type :submit[0m
+  [36m90[0m  [36m  :on-click #(send-message!! [:clj-vchat/add-message @fields] 8000)[0m
+  [36m91[0m  [36m  :value "comment"}]]])[0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:90  column:19  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.components.ws/send-message!![0m
+
+  [36m86[0m  [36m       :value (:message @fields)[0m
+  [36m87[0m  [36m       :on-change @(swap! fields assoc :message (.. % -target -value))}]][0m
+  [36m88[0m  [36m    [:input.btn.btn-primary[0m
+  [36m89[0m  [36m     {:type :submit[0m
+  [33m90[0m  [1m      :on-click #(send-message!! [:clj-vchat/add-message @fields] 8000)[0m
+  [0m  [0m  [33m                  ^--- Use of undeclared Var clj-vchats.components.ws/send-message!![0m
+  [36m91[0m  [36m      :value "comment"}]]])[0m
+  [36m92[0m  [36m[0m
+  [36m93[0m  [36m(defn response-handler [messages fields errors][0m
+  [36m94[0m  [36m  (fn [{[_ message] :?data}][0m
+  [36m95[0m  [36m    (if-let [response-errors (:errors message)][0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.125 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:87  column:53  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.components.ws/%[0m
+
+  [36m83[0m  [36m [:textarea.form-control[0m
+  [36m84[0m  [36m  {:rows 4[0m
+  [36m85[0m  [36m   :cols 50[0m
+  [36m86[0m  [36m   :value (:message @fields)[0m
+  [33m87[0m  [1m   :on-change @(swap! fields assoc :message (.. % -target -value))}]][0m
+  [0m  [0m  [33m                                                ^--- Use of undeclared Var clj-vchats.components.ws/%[0m
+  [36m88[0m  [36m[:input.btn.btn-primary[0m
+  [36m89[0m  [36m {:type :submit[0m
+  [36m90[0m  [36m  :on-click #(send-message!! [:clj-vchat/add-message @fields] 8000)[0m
+  [36m91[0m  [36m  :value "comment"}]]])[0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:90  column:19  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.components.ws/send-message!![0m
+
+  [36m86[0m  [36m       :value (:message @fields)[0m
+  [36m87[0m  [36m       :on-change @(swap! fields assoc :message (.. % -target -value))}]][0m
+  [36m88[0m  [36m    [:input.btn.btn-primary[0m
+  [36m89[0m  [36m     {:type :submit[0m
+  [33m90[0m  [1m      :on-click #(send-message!! [:clj-vchat/add-message @fields] 8000)[0m
+  [0m  [0m  [33m                  ^--- Use of undeclared Var clj-vchats.components.ws/send-message!![0m
+  [36m91[0m  [36m      :value "comment"}]]])[0m
+  [36m92[0m  [36m[0m
+  [36m93[0m  [36m(defn response-handler [messages fields errors][0m
+  [36m94[0m  [36m  (fn [{[_ message] :?data}][0m
+  [36m95[0m  [36m    (if-let [response-errors (:errors message)][0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.222 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Figwheel: Can't open  ("src/cljs/clj_vchats/components/ws.cljs" 87 53) No :open-file-command supplied in the config.
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.243 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[36m----  Compiler Warning on   src/cljs/clj_vchats/core.cljs   line:70  column:15  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.core/_[0m
+
+  [36m66[0m  [36m(let [_ (if (= :vchat @(rf/subscribe [:page]))[0m
+  [36m67[0m  [36m          (do[0m
+  [36m68[0m  [36m            (set! (.-display (.-style (.getElementById js/document "viewing")))[0m
+  [36m69[0m  [36m                  "block")[0m
+  [33m70[0m  [1m            _ (rf/clear-subscription-cache!)[0m
+  [0m  [0m  [33m            ^--- Use of undeclared Var clj-vchats.core/_[0m
+  [36m71[0m  [36m            _ (r/render (ws/home) (.getElementById js/document "chats"))[0m
+  [36m72[0m  [36m            )[0m
+  [36m73[0m  [36m          (do[0m
+  [36m74[0m  [36m            (set! (.-display (.-style (.getElementById js/document "viewing")))[0m
+  [36m75[0m  [36m                  "none")[0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/clj_vchats/core.cljs   line:71  column:15  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.core/_[0m
+
+  [36m67[0m  [36m(do[0m
+  [36m68[0m  [36m  (set! (.-display (.-style (.getElementById js/document "viewing")))[0m
+  [36m69[0m  [36m        "block")[0m
+  [36m70[0m  [36m  _ (rf/clear-subscription-cache!)[0m
+  [33m71[0m  [1m  _ (r/render (ws/home) (.getElementById js/document "chats"))[0m
+  [0m  [0m  [33m  ^--- Use of undeclared Var clj-vchats.core/_[0m
+  [36m72[0m  [36m  )[0m
+  [36m73[0m  [36m(do[0m
+  [36m74[0m  [36m  (set! (.-display (.-style (.getElementById js/document "viewing")))[0m
+  [36m75[0m  [36m        "none")[0m
+  [36m76[0m  [36m  (println "disconnect!")[0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/core.cljs  ----[0m
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.324 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.248 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.223 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.289 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.175 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.15 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.248 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:87  column:53  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.components.ws/%[0m
+
+  [36m83[0m  [36m [:textarea.form-control[0m
+  [36m84[0m  [36m  {:rows 4[0m
+  [36m85[0m  [36m   :cols 50[0m
+  [36m86[0m  [36m   :value (:message @fields)[0m
+  [33m87[0m  [1m   :on-change @(swap! fields assoc :message (.. % -target -value))}]][0m
+  [0m  [0m  [33m                                                ^--- Use of undeclared Var clj-vchats.components.ws/%[0m
+  [36m88[0m  [36m[:input.btn.btn-primary[0m
+  [36m89[0m  [36m {:type :submit[0m
+  [36m90[0m  [36m  :on-click #(send-message!! [:clj-vchat/add-message @fields] 8000)[0m
+  [36m91[0m  [36m  :value "comment"}]]])[0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:90  column:19  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.components.ws/send-message!![0m
+
+  [36m86[0m  [36m       :value (:message @fields)[0m
+  [36m87[0m  [36m       :on-change @(swap! fields assoc :message (.. % -target -value))}]][0m
+  [36m88[0m  [36m    [:input.btn.btn-primary[0m
+  [36m89[0m  [36m     {:type :submit[0m
+  [33m90[0m  [1m      :on-click #(send-message!! [:clj-vchat/add-message @fields] 8000)[0m
+  [0m  [0m  [33m                  ^--- Use of undeclared Var clj-vchats.components.ws/send-message!![0m
+  [36m91[0m  [36m      :value "comment"}]]])[0m
+  [36m92[0m  [36m[0m
+  [36m93[0m  [36m(defn response-handler [messages fields errors][0m
+  [36m94[0m  [36m  (fn [{[_ message] :?data}][0m
+  [36m95[0m  [36m    (if-let [response-errors (:errors message)][0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.297 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:87  column:63  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.components.ws/-value[0m
+
+  [36m83[0m  [36m [:textarea.form-control[0m
+  [36m84[0m  [36m  {:rows 4[0m
+  [36m85[0m  [36m   :cols 50[0m
+  [36m86[0m  [36m   :value (:message @fields)[0m
+  [33m87[0m  [1m   :on-change @(swap! fields assoc :message (-> % -target -value))}]][0m
+  [0m  [0m  [33m                                                          ^--- Use of undeclared Var clj-vchats.components.ws/-value[0m
+  [36m88[0m  [36m[:input.btn.btn-primary[0m
+  [36m89[0m  [36m {:type :submit[0m
+  [36m90[0m  [36m  :on-click #(send-message!! [:clj-vchat/add-message @fields] 8000)[0m
+  [36m91[0m  [36m  :value "comment"}]]])[0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:87  column:55  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.components.ws/-target[0m
+
+  [36m83[0m  [36m [:textarea.form-control[0m
+  [36m84[0m  [36m  {:rows 4[0m
+  [36m85[0m  [36m   :cols 50[0m
+  [36m86[0m  [36m   :value (:message @fields)[0m
+  [33m87[0m  [1m   :on-change @(swap! fields assoc :message (-> % -target -value))}]][0m
+  [0m  [0m  [33m                                                  ^--- Use of undeclared Var clj-vchats.components.ws/-target[0m
+  [36m88[0m  [36m[:input.btn.btn-primary[0m
+  [36m89[0m  [36m {:type :submit[0m
+  [36m90[0m  [36m  :on-click #(send-message!! [:clj-vchat/add-message @fields] 8000)[0m
+  [36m91[0m  [36m  :value "comment"}]]])[0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:87  column:53  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.components.ws/%[0m
+
+  [36m83[0m  [36m [:textarea.form-control[0m
+  [36m84[0m  [36m  {:rows 4[0m
+  [36m85[0m  [36m   :cols 50[0m
+  [36m86[0m  [36m   :value (:message @fields)[0m
+  [33m87[0m  [1m   :on-change @(swap! fields assoc :message (-> % -target -value))}]][0m
+  [0m  [0m  [33m                                                ^--- Use of undeclared Var clj-vchats.components.ws/%[0m
+  [36m88[0m  [36m[:input.btn.btn-primary[0m
+  [36m89[0m  [36m {:type :submit[0m
+  [36m90[0m  [36m  :on-click #(send-message!! [:clj-vchat/add-message @fields] 8000)[0m
+  [36m91[0m  [36m  :value "comment"}]]])[0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:90  column:19  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.components.ws/send-message!![0m
+
+  [36m86[0m  [36m       :value (:message @fields)[0m
+  [36m87[0m  [36m       :on-change @(swap! fields assoc :message (-> % -target -value))}]][0m
+  [36m88[0m  [36m    [:input.btn.btn-primary[0m
+  [36m89[0m  [36m     {:type :submit[0m
+  [33m90[0m  [1m      :on-click #(send-message!! [:clj-vchat/add-message @fields] 8000)[0m
+  [0m  [0m  [33m                  ^--- Use of undeclared Var clj-vchats.components.ws/send-message!![0m
+  [36m91[0m  [36m      :value "comment"}]]])[0m
+  [36m92[0m  [36m[0m
+  [36m93[0m  [36m(defn response-handler [messages fields errors][0m
+  [36m94[0m  [36m  (fn [{[_ message] :?data}][0m
+  [36m95[0m  [36m    (if-let [response-errors (:errors message)][0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.414 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:87  column:53  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.components.ws/%[0m
+
+  [36m83[0m  [36m [:textarea.form-control[0m
+  [36m84[0m  [36m  {:rows 4[0m
+  [36m85[0m  [36m   :cols 50[0m
+  [36m86[0m  [36m   :value (:message @fields)[0m
+  [33m87[0m  [1m   :on-change @(swap! fields assoc :message (-> % .-target .-value))}]][0m
+  [0m  [0m  [33m                                                ^--- Use of undeclared Var clj-vchats.components.ws/%[0m
+  [36m88[0m  [36m[:input.btn.btn-primary[0m
+  [36m89[0m  [36m {:type :submit[0m
+  [36m90[0m  [36m  :on-click #(send-message!! [:clj-vchat/add-message @fields] 8000)[0m
+  [36m91[0m  [36m  :value "comment"}]]])[0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:90  column:19  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.components.ws/send-message!![0m
+
+  [36m86[0m  [36m       :value (:message @fields)[0m
+  [36m87[0m  [36m       :on-change @(swap! fields assoc :message (-> % .-target .-value))}]][0m
+  [36m88[0m  [36m    [:input.btn.btn-primary[0m
+  [36m89[0m  [36m     {:type :submit[0m
+  [33m90[0m  [1m      :on-click #(send-message!! [:clj-vchat/add-message @fields] 8000)[0m
+  [0m  [0m  [33m                  ^--- Use of undeclared Var clj-vchats.components.ws/send-message!![0m
+  [36m91[0m  [36m      :value "comment"}]]])[0m
+  [36m92[0m  [36m[0m
+  [36m93[0m  [36m(defn response-handler [messages fields errors][0m
+  [36m94[0m  [36m  (fn [{[_ message] :?data}][0m
+  [36m95[0m  [36m    (if-let [response-errors (:errors message)][0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.334 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[36m----  Compiler Warning on   src/cljs/clj_vchats/components/ws.cljs   line:90  column:19  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.components.ws/send-message!![0m
+
+  [36m86[0m  [36m       :value (:message @fields)[0m
+  [36m87[0m  [36m       :on-change #(swap! fields assoc :message (-> % .-target .-value))}]][0m
+  [36m88[0m  [36m    [:input.btn.btn-primary[0m
+  [36m89[0m  [36m     {:type :submit[0m
+  [33m90[0m  [1m      :on-click #(send-message!! [:clj-vchat/add-message @fields] 8000)[0m
+  [0m  [0m  [33m                  ^--- Use of undeclared Var clj-vchats.components.ws/send-message!![0m
+  [36m91[0m  [36m      :value "comment"}]]])[0m
+  [36m92[0m  [36m[0m
+  [36m93[0m  [36m(defn response-handler [messages fields errors][0m
+  [36m94[0m  [36m  (fn [{[_ message] :?data}][0m
+  [36m95[0m  [36m    (if-let [response-errors (:errors message)][0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/components/ws.cljs  ----[0m
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.434 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.191 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.235 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.967 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.111 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.022 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.047 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.999 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.977 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.012 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.094 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.018 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.888 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.855 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.819 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.745 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.797 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.883 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.812 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.94 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.823 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.906 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[36m----  Compiler Warning on   src/cljs/clj_vchats/core.cljs   line:37  column:1  ----[0m
+
+  [1mtest already refers to: cljs.core/test being replaced by: clj-vchats.core/test[0m
+
+  [36m33[0m  [36m     [nav-link "#/" "Home" :home][0m
+  [36m34[0m  [36m     [nav-link "#/about" "About" :about][0m
+  [36m35[0m  [36m     [nav-link "#/vchat" "Vchat" :vchat]]]])[0m
+  [36m36[0m  [36m[0m
+  [33m37[0m  [1m(defn test [][0m
+  [0m  [0m  [33m^--- test already refers to: cljs.core/test being replaced by: clj-vchats.core/test[0m
+  [36m38[0m  [36m  (let [messages (atom nil)][0m
+  [36m39[0m  [36m    (fn [][0m
+  [36m40[0m  [36m      [:div[0m
+  [36m41[0m  [36m       [:div.row[0m
+  [36m42[0m  [36m        [:div.span122[0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/core.cljs  ----[0m
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.781 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.736 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.841 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[31mFailed to compile build :app from ["src/cljs" "src/cljc" "env/dev/cljs"] in 0.752 seconds.[0m
+[36m----  Could not Analyze  src/cljs/clj_vchats/core.cljs   line:72  column:1  ----[0m
+
+  [1mUnable to resolve var: test-page in this context at line 72 /home/elect/GitHub/clj-vchat/src/cljs/clj_vchats/core.cljs[0m
+
+  [36m70[0m  [36m    )[0m
+  [36m71[0m  [36m[0m
+  [33m72[0m  [1m(def pages[0m
+  [0m  [0m  [33m^--- Unable to resolve var: test-page in this context at line 72 /home/elect/GitHub/clj-vchat/src/cljs/clj_vchats/core.cljs[0m
+  [36m73[0m  [36m  {:home #'home-page[0m
+  [36m74[0m  [36m   :about #'about-page[0m
+  [36m75[0m  [36m   :vchat #'vchat-page[0m
+
+[36m----  Analysis Error : Please see src/cljs/clj_vchats/core.cljs  ----[0m
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.747 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.737 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.75 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.765 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.77 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.797 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.829 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.743 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.674 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.737 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[36m----  Compiler Warning on   src/cljs/clj_vchats/core.cljs   line:41  column:38  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.core/messages[0m
+
+  [36m38[0m  [36m         [:p "message:"[0m
+  [36m39[0m  [36m               [:input.form-control[0m
+  [36m40[0m  [36m                {:type :text[0m
+  [33m41[0m  [1m                 :on-change #(reset! messages (-> % .-target .-value))[0m
+  [0m  [0m  [33m                                     ^--- Use of undeclared Var clj-vchats.core/messages[0m
+  [36m42[0m  [36m                 :value @messages}]]]]]))[0m
+  [36m43[0m  [36m  )[0m
+  [36m44[0m  [36m[0m
+  [36m45[0m  [36m(defn about-page [][0m
+  [36m46[0m  [36m  (println "About Page!")[0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/clj_vchats/core.cljs   line:42  column:26  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.core/messages[0m
+
+  [36m38[0m  [36m         [:p "message:"[0m
+  [36m39[0m  [36m               [:input.form-control[0m
+  [36m40[0m  [36m                {:type :text[0m
+  [36m41[0m  [36m                 :on-change #(reset! messages (-> % .-target .-value))[0m
+  [33m42[0m  [1m                 :value @messages}]]]]]))[0m
+  [0m  [0m  [33m                         ^--- Use of undeclared Var clj-vchats.core/messages[0m
+  [36m43[0m  [36m  )[0m
+  [36m44[0m  [36m[0m
+  [36m45[0m  [36m(defn about-page [][0m
+  [36m46[0m  [36m  (println "About Page!")[0m
+  [36m47[0m  [36m  [:div.container[0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/core.cljs  ----[0m
+[31mFailed to compile build :app from ["src/cljs" "src/cljc" "env/dev/cljs"] in 0.806 seconds.[0m
+[36m----  Could not Read  src/cljs/clj_vchats/core.cljs   line:42 ----[0m
+
+  [1m/home/elect/GitHub/clj-vchat/src/cljs/clj_vchats/core.cljs [line 42, col 38] Unmatched delimiter ].[0m
+
+  [36m40[0m  [36m                {:type :text[0m
+  [36m41[0m  [36m                 :on-change #(reset! messages (-> % .-target .-value))[0m
+  [33m42[0m  [1m                 :value @messages}]]]]]))[0m
+  [0m  [0m  [33m                 /home/elect/GitHub/clj-vchat/src/cljs/clj_vchats/core.cljs [line 42, col 38] Unmatched delimiter ].[0m
+  [36m43[0m  [36m  )[0m
+  [36m44[0m  [36m[0m
+  [36m45[0m  [36m(defn about-page [][0m
+
+[36m----  Reader Error : Please see src/cljs/clj_vchats/core.cljs  ----[0m
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[36m----  Compiler Warning on   src/cljs/clj_vchats/core.cljs   line:42  column:38  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.core/messages[0m
+
+  [36m39[0m  [36m         [:p "message:"[0m
+  [36m40[0m  [36m               [:input.form-control[0m
+  [36m41[0m  [36m                {:type :text[0m
+  [33m42[0m  [1m                 :on-change #(reset! messages (-> % .-target .-value))[0m
+  [0m  [0m  [33m                                     ^--- Use of undeclared Var clj-vchats.core/messages[0m
+  [36m43[0m  [36m                 :value @messages}]]]]]))[0m
+  [36m44[0m  [36m  )[0m
+  [36m45[0m  [36m[0m
+  [36m46[0m  [36m(defn about-page [][0m
+  [36m47[0m  [36m  (println "About Page!")[0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/core.cljs  ----[0m
+[36m----  Compiler Warning on   src/cljs/clj_vchats/core.cljs   line:43  column:26  ----[0m
+
+  [1mUse of undeclared Var clj-vchats.core/messages[0m
+
+  [36m39[0m  [36m         [:p "message:"[0m
+  [36m40[0m  [36m               [:input.form-control[0m
+  [36m41[0m  [36m                {:type :text[0m
+  [36m42[0m  [36m                 :on-change #(reset! messages (-> % .-target .-value))[0m
+  [33m43[0m  [1m                 :value @messages}]]]]]))[0m
+  [0m  [0m  [33m                         ^--- Use of undeclared Var clj-vchats.core/messages[0m
+  [36m44[0m  [36m  )[0m
+  [36m45[0m  [36m[0m
+  [36m46[0m  [36m(defn about-page [][0m
+  [36m47[0m  [36m  (println "About Page!")[0m
+  [36m48[0m  [36m  [:div.container[0m
+
+[36m----  Compiler Warning : Please see src/cljs/clj_vchats/core.cljs  ----[0m
+[31mFailed to compile build :app from ["src/cljs" "src/cljc" "env/dev/cljs"] in 0.807 seconds.[0m
+[36m----  Could not Read  src/cljs/clj_vchats/core.cljs   line:43 ----[0m
+
+  [1m/home/elect/GitHub/clj-vchat/src/cljs/clj_vchats/core.cljs [line 43, col 38] Unmatched delimiter ].[0m
+
+  [36m41[0m  [36m                {:type :text[0m
+  [36m42[0m  [36m                 :on-change #(reset! messages (-> % .-target .-value))[0m
+  [33m43[0m  [1m                 :value @messages}]]]]]))[0m
+  [0m  [0m  [33m                 /home/elect/GitHub/clj-vchat/src/cljs/clj_vchats/core.cljs [line 43, col 38] Unmatched delimiter ].[0m
+  [36m44[0m  [36m  )[0m
+  [36m45[0m  [36m[0m
+  [36m46[0m  [36m(defn about-page [][0m
+
+[36m----  Reader Error : Please see src/cljs/clj_vchats/core.cljs  ----[0m
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.866 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.85 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.807 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.966 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.829 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.91 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.828 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.732 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.819 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.883 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.799 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.787 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.905 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.779 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.751 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.762 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.783 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.806 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.112 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.86 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.219 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.775 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.754 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.771 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.679 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.851 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/ws.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.867 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.788 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/core.js

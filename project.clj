@@ -37,6 +37,8 @@
                  [selmer "1.11.7"]
 
                  [cljsjs/pixi "4.7.0-0"]
+                 [com.taoensso/sente "1.12.0"]
+                 [bouncer "1.0.1"]
                  ]
 
   :min-lein-version "2.0.0"

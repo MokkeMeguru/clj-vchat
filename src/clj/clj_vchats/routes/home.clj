@@ -16,5 +16,8 @@
    ["/docs" {:get {:handler (fn [_]
                               (-> (response/ok (-> "docs/docs.md" io/resource slurp))
                                   (response/header "Content-Type" "text/plain; charset=utf-8")))}}]
-   ["/ws" {:get {:handler ws/ws-handler}}]])
+   ["/ws" {:get {:handler (fn [req]
+                            (ws/ring-ajax-get-or-ws-handshake req))}
+           :post {:handler (fn [req]
+                             (ws/ring-ajax-post req))}}]])
 

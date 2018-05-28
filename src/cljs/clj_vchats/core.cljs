@@ -9,7 +9,8 @@
             [clj-vchats.ajax :refer [load-interceptors!]]
             [clj-vchats.events]
 
-            [clj-vchats.components.pixi-art :as pixi-art] 
+            [clj-vchats.components.pixi-art :as pixi-art]
+            [clj-vchats.components.ws :as ws]
             )
   (:import goog.History))
 
@@ -31,9 +32,24 @@
     [:ul.nav.navbar-nav.mr-auto
      [nav-link "#/" "Home" :home]
      [nav-link "#/about" "About" :about]
-     [nav-link "#/vchat" "Vchat" :vchat]]]])
+     [nav-link "#/vchat" "Vchat" :vchat]
+     [nav-link "#/testpage" "Testpage" :testpage]]]])
+
+(defn test-page []
+  (let [messages (r/atom nil)]
+    (fn []
+      [:div.container
+       [:div.row
+        [:div
+         [:p "message:"
+          [:input.form-control
+           {:type :text
+            :field :text
+            :on-change #(reset! messages (-> % .-target .-value))
+            :value @messages}]]]]])))
 
 (defn about-page []
+  (println "About Page!")
   [:div.container
    [:div.row
     [:div.col-md-12
@@ -50,18 +66,32 @@
              {:__html (md->html docs)}}]])])
 
 (defn vchat-page []
-  [:div.container
-   [:div.alert.alert-info "Sorry, This page doesn't have any contents..."]])
+    [:div.container
+     [:div.alert.alert-info "Sorry, This page doesn't have any contents..."]]
+    )
 
 (def pages
   {:home #'home-page
    :about #'about-page
-   :vchat #'vchat-page})
+   :vchat #'vchat-page
+   :testpage #'test-page})
 
 (defn page []
   (let [_ (if (= :vchat @(rf/subscribe [:page]))
-            (set! (.-display (.-style (.getElementById js/document "viewing"))) "block")(set! (.-display (.-style (.getElementById js/document "viewing"))) "none"))
-        ]
+            (do
+              (set! (.-display (.-style (.getElementById js/document "viewing")))
+                    "block")
+              (println "Connecting!!")
+              ;; _ (start-router! (response-handler messages fields errors))
+              (rf/clear-subscription-cache!)
+              (r/render (ws/home) (.getElementById js/document "chats")))
+            (do
+              (set! (.-display (.-style (.getElementById js/document "viewing")))
+                    "none")
+              (r/render [:div] (.getElementById js/document "chats"))
+              (println "disconnect!")
+              (ws/stop-router!)
+              ))]
    [:div
     [navbar]
     [(pages @(rf/subscribe [:page]))]]))
@@ -78,6 +108,9 @@
 
 (secretary/defroute "/vchat" []
   (rf/dispatch [:set-active-page :vchat]))
+
+(secretary/defroute "/testpage" []
+  (rf/dispatch [:set-active-page :testpage]))
 ;; -------------------------
 ;; History
 ;; must be called after routes have been defined
@@ -95,6 +128,7 @@
   (GET "/docs" {:handler #(rf/dispatch [:set-docs %])}))
 
 (defn mount-components []
+  (println "render")
   (rf/clear-subscription-cache!)
   (r/render [#'page] (.getElementById js/document "app")))
 
@@ -105,3 +139,6 @@
   (fetch-docs!)
   (hook-browser-navigation!)
   (mount-components))
+
+
+

@@ -26,8 +26,19 @@ INSERT INTO messages
 (chan, name, message, timestamp)
 VALUES (:chan, :name, :message, :timestamp)
 
--- :name get-messages :! :n
+-- :name get-messages :? :*
 -- :doc select message by chan
-SELECT *
+SELECT name, message, timestamp
 FROM messages
 WHERE chan = :chan
+ORDER BY timestamp
+
+-- :name delete-channel :! :n
+-- :doc delete message
+DELETE FROM messages
+WHERE chan = :chan
+
+
+-- :name get-all-messages :? :*
+SELECT *
+FROM messages

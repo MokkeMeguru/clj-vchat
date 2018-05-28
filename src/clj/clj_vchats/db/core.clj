@@ -59,3 +59,20 @@
   (sql-value [value] (to-pg-json value))
   IPersistentVector
   (sql-value [value] (to-pg-json value)))
+
+
+;; test
+;; (save-message! {:chan "elect"
+;;                 :name "elect"
+;;                 :message "Hello! my channel"
+;;                 :timestamp (java.sql.Timestamp. (System/currentTimeMillis))})
+
+;; (save-message! {:chan "elect"
+;;                 :name "elect"
+;;                 :message "Nice to meet you!"
+;;                 :timestamp (java.sql.Timestamp. (System/currentTimeMillis))})
+
+
+;; (get-messages {:chan "elect"})
+
+;; (delete-channel {:chan "elect"})
