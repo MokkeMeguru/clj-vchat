@@ -72,7 +72,6 @@
 ;;                 :message "Nice to meet you!"
 ;;                 :timestamp (java.sql.Timestamp. (System/currentTimeMillis))})
 
-
 ;; (get-messages {:chan "elect"})
 
 ;; (delete-channel {:chan "elect"})

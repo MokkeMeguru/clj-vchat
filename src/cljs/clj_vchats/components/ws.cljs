@@ -1,6 +1,7 @@
 (ns clj-vchats.components.ws
   (:require [taoensso.sente :as sente]
-            [reagent.core :as r]))
+            [reagent.core :as r]
+            [re-frame.core :as rf]))
 
 ;; ---------------------------
 (defn message-list [messages]
@@ -67,29 +68,34 @@
 (defn message-form [fields errors]
   [:div.content
    [:div.form-group
-    [:p (str errors)]
-    [:p (:chan @fields)
+    [:div
      [:p "this form will be removed"]
+     [:div [:p "Chan:"]
+      [:input.form-control
+       {:type :text
+        :on-change #(rf/dispatch [:set-chan (-> % .-target .-value)])
+        :value @(rf/subscribe [:chan])
+        }]]]
+    [:div [:p "Name:"]
      [:input.form-control
       {:type :text
-       :on-change #(swap! fields assoc :chan (-> % .-target .-value))
-       :value (:chan @fields)
-       }]]
-    [:p "Name:"
-     [:input.form-control
-      {:type :text
-       :on-change #(swap! fields assoc :name (-> % .-target .-value))
-       :value (:name @fields)}]
-     (if (:name @fields)  [:p "O"] [:p "X"])]
-    [:p "Message:"
+       :on-change #(rf/dispatch [:set-name (-> % .-target .-value)])
+       :value  @(rf/subscribe [:name])
+       }]
+     (if  @(rf/subscribe [:name])  [:p "O"] [:p "X"])]
+    [:div [:p "Message:"]
      [:textarea.form-control
       {:rows 4
        :cols 50
-       :value (:message @fields)
-       :on-change #(swap! fields assoc :message (-> % .-target .-value))}]]
+       :value  @(rf/subscribe [:message])
+       :on-change #(rf/dispatch [:set-message (-> % .-target .-value)])
+       }]]
     [:input.btn.btn-primary
      {:type :submit
-      :on-click #(send-message! [:clj-vchat/add-message @fields] 8000)
+      :on-click #(send-message! [:clj-vchat/add-message
+                                 {:chan @(rf/subscribe [:chan])
+                                  :name @(rf/subscribe [:name])
+                                  :message @(rf/subscribe [:message])}] 8000)
       :value "comment"}]]])
 
 (defn response-handler [messages fields errors]
@@ -109,8 +115,7 @@
       [:div.container
        [:div.row>div.col-sm-12
         [:div.span12
-         [message-list messages]
-              ]]
+         ]]
        [:div.row
         [:div.span12
          (message-form fields errors)]]])))

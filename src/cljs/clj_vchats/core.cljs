@@ -35,18 +35,18 @@
      [nav-link "#/vchat" "Vchat" :vchat]
      [nav-link "#/testpage" "Testpage" :testpage]]]])
 
-(defn test-page []
-  (let [messages (r/atom nil)]
-    (fn []
-      [:div.container
-       [:div.row
-        [:div
-         [:p "message:"
-          [:input.form-control
-           {:type :text
-            :field :text
-            :on-change #(reset! messages (-> % .-target .-value))
-            :value @messages}]]]]])))
+;; (defn test-page []
+;;   (let [messages (r/atom nil)]
+;;     (fn []
+;;       [:div.container
+;;        [:div.row
+;;         [:div
+;;          [:p "message:"
+;;           [:input.form-control
+;;            {:type :text
+;;             :field :text
+;;             :on-change #(reset! messages (-> % .-target .-value))
+;;             :value @messages}]]]]])))
 
 (defn about-page []
   (println "About Page!")
@@ -66,32 +66,32 @@
              {:__html (md->html docs)}}]])])
 
 (defn vchat-page []
-    [:div.container
-     [:div.alert.alert-info "Sorry, This page doesn't have any contents..."]]
-    )
+  (r/create-class
+   {:component-will-mount
+    (fn [] (println "mounted!")
+      (pixi-art/load-resources!))
+    :display-name "viewing"
+    :reagent-render
+    (fn []
+      [:div.container
+       [:div.alert.alert-info "Sorry, This page doesn't have any contents..."]
+       [:canvas#viewing]
+       [ws/home]
+       ])}))
 
 (def pages
   {:home #'home-page
    :about #'about-page
    :vchat #'vchat-page
-   :testpage #'test-page})
+   :testpage #'about-page})
 
 (defn page []
   (let [_ (if (= :vchat @(rf/subscribe [:page]))
             (do
-              (set! (.-display (.-style (.getElementById js/document "viewing")))
-                    "block")
+              (ws/start-router! (ws/response-handler (atom nil) (atom nil) (atom nil)))
               (println "Connecting!!")
-              ;; _ (start-router! (response-handler messages fields errors))
-              (rf/clear-subscription-cache!)
-              (r/render (ws/home) (.getElementById js/document "chats")))
-            (do
-              (set! (.-display (.-style (.getElementById js/document "viewing")))
-                    "none")
-              (r/render [:div] (.getElementById js/document "chats"))
-              (println "disconnect!")
-              (ws/stop-router!)
-              ))]
+              (rf/clear-subscription-cache!))
+            (println "disconnect!"))]
    [:div
     [navbar]
     [(pages @(rf/subscribe [:page]))]]))
@@ -126,19 +126,15 @@
 ;; Initialize app
 (defn fetch-docs! []
   (GET "/docs" {:handler #(rf/dispatch [:set-docs %])}))
-
+ [:div.alert.alert-info "Sorry, This page doesn't have any contents..."]
 (defn mount-components []
   (println "render")
   (rf/clear-subscription-cache!)
   (r/render [#'page] (.getElementById js/document "app")))
 
 (defn init! []
-  (pixi-art/load-resources!) ;; !!!
   (rf/dispatch-sync [:initialize-db])
   (load-interceptors!)
   (fetch-docs!)
   (hook-browser-navigation!)
   (mount-components))
-
-
-

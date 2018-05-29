@@ -42,11 +42,13 @@
 
 (defn handle-message! [{:keys [id client-id ?data]}]
   (println "\n\n+++++++++++ GOT MESSAGE:" id (keys ?data))
-  (when (= id :clj-vchats/add-message)
+  (println (= id :clj-vchat/add-message))
+  (when (= id :clj-vchat/add-message)
     (let [response (-> ?data
                        (assoc :timestamp (java.sql.Timestamp.
                                           (System/currentTimeMillis)))
                        save-message!)]
+      (println response)
       (if (:errors response)
         (chsk-send! client-id [:clj-vchats/error response])
         (doseq [uid (:any @connected-uids)]

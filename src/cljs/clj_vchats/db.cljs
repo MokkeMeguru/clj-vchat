@@ -1,4 +1,5 @@
 (ns clj-vchats.db)
 
 (def default-db
-  {:page :home})
+  {:page :home
+   :container (js/PIXI.Container.)})

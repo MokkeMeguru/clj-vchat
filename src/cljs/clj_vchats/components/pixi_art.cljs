@@ -1,12 +1,11 @@
 (ns clj-vchats.components.pixi-art
   (:require [cljsjs.pixi]
-            [reagent.core :as r]))
+            [reagent.core :as r]
+            [re-frame.core :as rf]))
 
 (defonce container (js/PIXI.Container.))
 
-(defonce app-state (r/atom nil))
-
-(defonce renderer
+(defn renderer []
   (let [view-canvas (.getElementById js/document "viewing")
         canvas-width (.-width view-canvas)
         canvas-height (.-height view-canvas)]
@@ -19,12 +18,14 @@
                               :height 720})))
 
 ;; idea
-;; 1. create 100 Pixi's text object's list "TL"
+;; 1. create 20 Pixi's text object's list "TL"
 ;; 2. if it gets a message, TL[i] (TL[0]...TL[i-1] is full)'s text become the message
-;; 3. if i = 100, TL[0]'s text become the message (doesn't TL[100])
+;; 3. if i = 20, TL[0]'s text become the message (doesn't TL[20])
 ;; :. TL[i] = [object position]
 ;;     - first TL[i] = object / second TL[i] = position
 
+;; pixi/create-text : keys : str id
+;; pixi/create-sprite  : keys : path id
 (defn print-word [str]
   (let [style (clj->js {:font "bold 60px Arial"
                         :fill "white"
@@ -43,12 +44,11 @@
 (defn completed-loading-resources!
   [loader resources]
   (println "Resource loaded!")
-  (let [sample-image (js/PIXI.Sprite. (aget resources
-                                            "sample-image"
-                                            "texture"))]
+  ;; (aget ...) => (goog.object/getValueByKeys ...)
+  (let [sample-image (js/PIXI.Sprite. (goog.object/getValueByKeys resources "sample-image" "texture"))]
     (.addChild container sample-image)
     (print-word "Hello Pixi!")
-    (.render renderer container)))
+    (.render (renderer) container)))
 
 (defn load-resources! []
   (-> (js/PIXI.loaders.Loader.)
