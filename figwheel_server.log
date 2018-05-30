@@ -4147,3 +4147,23 @@ Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "sr
 [32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.0 seconds.[0m
 notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/pixi_art.js
 Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.996 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/pixi_art.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.858 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/pixi_art.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.333 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/pixi_art.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 2.388 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/pixi_art.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 3.965 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/pixi_art.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 5.219 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/clj_vchats/components/pixi_art.js

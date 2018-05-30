@@ -27,7 +27,7 @@
     params
     :chan v/required
     :name v/required
-    :message [v/required [v/min-count 10]])))
+    :message [v/required [v/min-count 5]])))
 
 (defn save-message! [message]
   (if-let [errors (validate-message message)]

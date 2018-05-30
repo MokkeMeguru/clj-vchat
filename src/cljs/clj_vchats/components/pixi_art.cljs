@@ -15,7 +15,7 @@
                          #js {:view view-canvas
                               :antialias true
                               :width 1280
-                              :height 720})))
+                              :height 800})))
 
 ;; idea
 ;; 1. create 20 Pixi's text object's list "TL"
@@ -52,6 +52,6 @@
 
 (defn load-resources! []
   (-> (js/PIXI.loaders.Loader.)
-      (.add "sample-image" "img/temp.png")
+      (.add "sample-image" "img/chara.png")
       (.load completed-loading-resources!)))
 

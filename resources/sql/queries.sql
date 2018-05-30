@@ -31,7 +31,7 @@ VALUES (:chan, :name, :message, :timestamp)
 SELECT name, message, timestamp
 FROM messages
 WHERE chan = :chan
-ORDER BY timestamp
+ORDER BY timestamp DESC
 
 -- :name delete-channel :! :n
 -- :doc delete message

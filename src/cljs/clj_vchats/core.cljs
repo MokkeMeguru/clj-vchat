@@ -35,18 +35,18 @@
      [nav-link "#/vchat" "Vchat" :vchat]
      [nav-link "#/testpage" "Testpage" :testpage]]]])
 
-;; (defn test-page []
-;;   (let [messages (r/atom nil)]
-;;     (fn []
-;;       [:div.container
-;;        [:div.row
-;;         [:div
-;;          [:p "message:"
-;;           [:input.form-control
-;;            {:type :text
-;;             :field :text
-;;             :on-change #(reset! messages (-> % .-target .-value))
-;;             :value @messages}]]]]])))
+(defn test-page []
+  (let [messages (r/atom nil)]
+    (fn []
+      [:div.container
+       [:div.row
+        [:div
+         [:p "message:"
+          [:input.form-control
+           {:type :text
+            :field :text
+            :on-change #(reset! messages (-> % .-target .-value))
+            :value @messages}]]]]])))
 
 (defn about-page []
   (println "About Page!")
@@ -83,7 +83,7 @@
   {:home #'home-page
    :about #'about-page
    :vchat #'vchat-page
-   :testpage #'about-page})
+   :testpage #'test-page})
 
 (defn page []
   (let [_ (if (= :vchat @(rf/subscribe [:page]))
@@ -138,3 +138,5 @@
   (fetch-docs!)
   (hook-browser-navigation!)
   (mount-components))
+
+

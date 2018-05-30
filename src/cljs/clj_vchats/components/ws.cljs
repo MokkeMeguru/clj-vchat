@@ -67,35 +67,41 @@
 
 (defn message-form [fields errors]
   [:div.content
-   [:div.form-group
-    [:div
-     [:p "this form will be removed"]
-     [:div [:p "Chan:"]
-      [:input.form-control
+   [:div.container
+    [:div.form-inline  {:style {:marginBottom "10px"}}
+     [:div.form-group {:style {:marginBottom "10px"}}
+      [:label.text-left.col-sm-4 "Channel:"]
+      [:input.form-control.col-sm-8
        {:type :text
         :on-change #(rf/dispatch [:set-chan (-> % .-target .-value)])
         :value @(rf/subscribe [:chan])
+        :placeholder "This channel"
         }]]]
-    [:div [:p "Name:"]
-     [:input.form-control
-      {:type :text
-       :on-change #(rf/dispatch [:set-name (-> % .-target .-value)])
-       :value  @(rf/subscribe [:name])
-       }]
-     (if  @(rf/subscribe [:name])  [:p "O"] [:p "X"])]
-    [:div [:p "Message:"]
+    [:div.form-inline {:style {:marginBottom "15px"}}
+     [:div.form-group
+      [:label.col-sm-4.text-left "Name :"]
+      [:input.form-control.col-sm-8
+       {:type :text
+        :on-change #(rf/dispatch [:set-name (-> % .-target .-value)])
+        :value  @(rf/subscribe [:name])
+        :placeholder "Your name"
+        }]]]
+    [:div  {:style {:marginBottom "10px"}}
+     [:label.col-sm-4.text-left "Message:"]
      [:textarea.form-control
       {:rows 4
        :cols 50
        :value  @(rf/subscribe [:message])
        :on-change #(rf/dispatch [:set-message (-> % .-target .-value)])
+       :placeholder "At least 5 words"
        }]]
     [:input.btn.btn-primary
      {:type :submit
-      :on-click #(send-message! [:clj-vchat/add-message
-                                 {:chan @(rf/subscribe [:chan])
-                                  :name @(rf/subscribe [:name])
-                                  :message @(rf/subscribe [:message])}] 8000)
+      :on-click #(do (send-message! [:clj-vchat/add-message
+                                     {:chan @(rf/subscribe [:chan])
+                                      :name @(rf/subscribe [:name])
+                                      :message @(rf/subscribe [:message])}] 8000)
+                     (rf/dispatch [:remove-message]))
       :value "comment"}]]])
 
 (defn response-handler [messages fields errors]
@@ -110,8 +116,10 @@
 (defn home []
   (let [messages (r/atom nil)
         errors (r/atom nil)
-        fields (r/atom nil)]
+        fields (r/atom nil)
+        ]
     (fn []
+      (println (ajax.core/GET "/messages" {:params {:chan "elect"}}))
       [:div.container
        [:div.row>div.col-sm-12
         [:div.span12

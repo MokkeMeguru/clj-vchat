@@ -19,5 +19,13 @@
    ["/ws" {:get {:handler (fn [req]
                             (ws/ring-ajax-get-or-ws-handshake req))}
            :post {:handler (fn [req]
-                             (ws/ring-ajax-post req))}}]])
-
+                             (ws/ring-ajax-post req))}}]
+    
+   ["/messages" {:get {:handler (fn [req]
+                                  (println (:params req))
+                                  ;; (let [{{{:keys [chan]} :query} :parameters}]
+                                  ;; (println chan :parameters)
+                                  ;; (layout/message-list (db/get-messages chan) :parameters)
+                                  )
+                       :middleware [middleware/wrap-csrf
+                                    middleware/wrap-formats]}}]])

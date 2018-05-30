@@ -34,6 +34,11 @@
  (fn [db [_ message]]
    (assoc db :chan message)))
 
+(reg-event-db
+ :remove-message
+ (fn [db [_ _]]
+   (dissoc db :message)))
+
 ;;subscriptions
 
 (reg-sub
